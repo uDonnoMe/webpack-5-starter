@@ -28,5 +28,25 @@ module.exports = {
         to: 'static' // output目录下的相对路径（没有则会自动创建）
       }]
     })
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/, // exactly matches files w/ .js extension
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/preset-env', {
+                  useBuiltIns: "entry"
+                }
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  }
 };
