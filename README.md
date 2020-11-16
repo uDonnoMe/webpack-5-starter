@@ -1,4 +1,4 @@
-# VS Code调试es6代码步骤
+# Webpack 5 Starter
 
 本项目的主要目的是通过搭建一个简单的webpack脚手架，了解项目启动需要做的一些配置。
 
@@ -108,7 +108,7 @@
 
 ### 2. 启动script设置
 
-```JSON
+```JSONP
 "scripts": {
   // build: 生产环境打包命令
   "build": "webpack --mode=production --config=./config/webpack.config.js",
